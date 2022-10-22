@@ -1,0 +1,26 @@
+[
+    {
+        "produto": 3,
+        "tamanho": "XL",
+        "cor":"Green",
+        "quantidade": 1
+    },
+    {
+        "produto": 5,
+        "tamanho": "33",
+        "cor":"Blue",
+        "quantidade": 1
+    },
+    {
+        "produto": 6,
+        "tamanho": "XS",
+        "cor":"Gray",
+        "quantidade": 1
+    },
+    {
+        "produto": 8,
+        "tamanho": "XS",
+        "cor":"Blue",
+        "quantidade": 1
+    }
+]
