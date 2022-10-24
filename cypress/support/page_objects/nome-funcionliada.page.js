@@ -1,4 +1,4 @@
-class NomeClasse {
+class ProdutosConfig {
 
     addProduto(produto,tamanho,cor,quantidade){
         cy.visit('produtos')
@@ -11,4 +11,4 @@ class NomeClasse {
 
 }
 
-export default new NomeClasse()
+export default new ProdutosConfig()

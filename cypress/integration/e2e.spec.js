@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import NomeClasse from "../support/page_objects/nome-funcionliada.page"
+import ProdutosConfig from "../support/page_objects/nome-funcionliada.page"
 const infos = require("../fixtures/produto.json")
 const dados = require("../fixtures/perfil.json");
 const faker = require('faker');
@@ -22,30 +22,32 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
 
 
-        NomeClasse.addProduto(
+        ProdutosConfig.addProduto(
             infos[0].produto,
             infos[0].tamanho,
             infos[0].cor,
             infos[0].quantidade
         )
-        NomeClasse.addProduto(
+        ProdutosConfig.addProduto(
             infos[1].produto,
             infos[1].tamanho,
             infos[1].cor,
             infos[1].quantidade
         )
-        NomeClasse.addProduto(
+        ProdutosConfig.addProduto(
             infos[2].produto,
             infos[2].tamanho,
             infos[2].cor,
             infos[2].quantidade
         )
-        NomeClasse.addProduto(
+        ProdutosConfig.addProduto(
             infos[3].produto,
             infos[3].tamanho,
             infos[3].cor,
             infos[3].quantidade
         )
+
+        cy.get('[class="mini-cart-items"]:contains(4)').should('be.visible')
 
         let nomeFaker = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
@@ -73,6 +75,15 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             cep,
             telefone
         )
+
+        cy.get('address').contains(`${nomeFaker} ${sobrenomeFaker}`).should('be.visible')
+        cy.get('address').contains(empresaFaker).should('be.visible')
+        cy.get('address').contains(enderecoFaker).should('be.visible')
+        cy.get('address').contains(numero).should('be.visible')
+        cy.get('address').contains(cidade).should('be.visible')
+        cy.get('address').contains(estado).should('be.visible')
+        cy.get('address').contains(cep).should('be.visible')
+        cy.get('address').contains(telefone).should('be.visible')
     });
 
 })
