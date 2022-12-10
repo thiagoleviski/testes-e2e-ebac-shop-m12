@@ -1,25 +1,25 @@
 [
     {
-        "produto": 3,
-        "tamanho": "XL",
-        "cor":"Green",
+        "produto": 1,
+        "tamanho": "L",
+        "cor":"Red",
         "quantidade": 1
     },
     {
-        "produto": 5,
-        "tamanho": "33",
-        "cor":"Blue",
+        "produto": 4,
+        "tamanho": "L",
+        "cor":"Red",
         "quantidade": 1
     },
     {
         "produto": 6,
-        "tamanho": "L",
-        "cor":"Gray",
+        "tamanho": "33",
+        "cor":"Red",
         "quantidade": 1
     },
     {
-        "produto": 8,
-        "tamanho": "XS",
+        "produto": 6,
+        "tamanho": "34",
         "cor":"Blue",
         "quantidade": 1
     }
